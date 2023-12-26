@@ -37,6 +37,16 @@ class _SignFormState extends State<SignForm> {
     }
   }
 
+  void _handleContinue() {
+    if (_formKey.currentState!.validate()) {
+      _formKey.currentState!.save();
+      debugPrint("Email: $email");
+      debugPrint("Password: $password");
+      KeyboardUtil.hideKeyboard(context);
+      Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -131,14 +141,7 @@ class _SignFormState extends State<SignForm> {
           FormError(errors: errors),
           const SizedBox(height: 16),
           ElevatedButton(
-            onPressed: () {
-              if (_formKey.currentState!.validate()) {
-                _formKey.currentState!.save();
-                // if all are valid then go to success screen
-                KeyboardUtil.hideKeyboard(context);
-                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
-              }
-            },
+            onPressed: _handleContinue,
             child: const Text("Continue"),
           ),
         ],
