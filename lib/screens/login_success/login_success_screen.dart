@@ -14,10 +14,11 @@ class LoginSuccessScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
+          const Spacer(),
           const SizedBox(height: 16),
           Image.asset(
-            "assets/images/success.png",
-            height: MediaQuery.of(context).size.height * 0.4, //40%
+            "assets/images/tick.png",
+            height: MediaQuery.of(context).size.height * 0.2, //40%
           ),
           const SizedBox(height: 16),
           const Text(
@@ -25,7 +26,7 @@ class LoginSuccessScreen extends StatelessWidget {
             style: TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.bold,
-              color: Colors.black,
+              color: Colors.white,
             ),
           ),
           const Spacer(),
@@ -35,7 +36,7 @@ class LoginSuccessScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, InitScreen.routeName);
               },
-              child: const Text("Back to home"),
+              child: const Text("Get Started"),
             ),
           ),
           const Spacer(),
