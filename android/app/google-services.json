@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "540066499888",
+    "project_id": "liberate-3ffd0",
+    "storage_bucket": "liberate-3ffd0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:540066499888:android:0fc41c25ad3586577b4cf5",
+        "android_client_info": {
+          "package_name": "com.forward.liberate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlzo2uvi_64ISIn_xbojE1WjLbdTvRKn0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

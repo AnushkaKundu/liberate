@@ -7,6 +7,8 @@ import '../../../helper/keyboard.dart';
 import '../../forgot_password/forgot_password_screen.dart';
 import '../../login_success/login_success_screen.dart';
 
+import 'dart:developer';
+
 class SignForm extends StatefulWidget {
   const SignForm({super.key});
 
@@ -40,8 +42,8 @@ class _SignFormState extends State<SignForm> {
   void _handleContinue() {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState!.save();
-      debugPrint("Email: $email");
-      debugPrint("Password: $password");
+      log("Email: $email");
+      log("Password: $password");
       KeyboardUtil.hideKeyboard(context);
       Navigator.pushNamed(context, LoginSuccessScreen.routeName);
     }
@@ -52,6 +54,7 @@ class _SignFormState extends State<SignForm> {
     return Form(
       key: _formKey,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           TextFormField(
             keyboardType: TextInputType.emailAddress,
